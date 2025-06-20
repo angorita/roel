@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"roel/db"
+	"roel/handlers"
 )
 
 func main() {
@@ -11,5 +12,7 @@ func main() {
 		log.Fatal(err)
 		
 	}
+
 	defer db.Close()
+handlers.ListaMateriales(db)
 }
