@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	//clase 113
 	db, err := db.Conexion()
 	if err != nil {
 		log.Fatal(err)
