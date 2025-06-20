@@ -1,6 +1,15 @@
 package main
-import(
+
+import (
+	"log"
+	"roel/db"
 )
+
 func main() {
-	Conexion()
+	db, err := db.Conexion()
+	if err != nil {
+		log.Fatal(err)
+		
+	}
+	defer db.Close()
 }
